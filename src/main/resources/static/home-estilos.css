@@ -1,0 +1,57 @@
+/* BODY */
+body{
+    background-image: url(imagen-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+.navbar-brand{
+    margin-right: 0vw;
+}
+/* ICONO LIBRO */
+.bi{
+   margin: 0.5vw; 
+}
+
+/* TITULO PRINCIPAL */
+.titulo-home{
+    color: rgb(44, 247, 230);
+    text-align: center;
+    padding-left: 0vh;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    margin: 0;
+    -webkit-text-stroke: 0.5px black;
+}
+
+/* PARRAFO PRINCIPAL */
+.parrafo-home{
+    color:rgb(44, 247, 230);
+    text-align: center;
+    font-size: x-large;
+    padding: 1vw;
+    margin: 0vw;
+    -webkit-text-stroke: 0.5px black;
+}
+
+/* CARTAS DE INICIO */
+.cartas-presentacion{
+    width: 90vw;
+    display: flex;
+    padding: 5vw;
+    margin-left: 15%;
+    padding-top: 1vh;
+    margin-top: 1vh;
+}
+
+.card{
+    width: 35vh;
+    height: 47vh;
+    margin: 0.5vw;
+}
+
+.card-img-top{
+    height: 300px;
+    border: solid black 1px;
+}

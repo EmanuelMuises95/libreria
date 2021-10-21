@@ -1,0 +1,15 @@
+/* BODY */
+body{
+    background-image: url(imagen-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+.navbar-brand{
+    margin-right: 0vw;
+}
+/* ICONO LIBRO */
+.bi{
+   margin: 0.5vw; 
+}
