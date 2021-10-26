@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="home.html">Libreria</a>
+                <a class="navbar-brand" href="/">Libreria</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -34,16 +34,16 @@
                     </svg>
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" a href="/html/home.html">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" a href="/autor.html">Autor</a>
+                            <a class="nav-link active" href="/autor/mostrar-todos">Autor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" a href="/editorial.html">Editorial</a>
+                            <a class="nav-link" href="@{/editorial}">Editorial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" a href="/libro.html">Libro</a>
+                            <a class="nav-link" href="@{/libro}">Libro</a>
                         </li>
                     </ul>
                 </div>
@@ -58,6 +58,27 @@
         <div>
             <p class="parrafo-autores">Aqui encontraras los Autores cargados a nuestras bases de dato</p>
         </div>
+    </section>
+
+    <section>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Alta</th>
+                    <th scope="col">Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="autores:${autores}">
+                    <td th:text="${autores.id}"></td>
+                    <td th:text="${autores.nombre}"></td>
+                    <td th:text="${autores.alta}"></td>
+                    <td><a th:href="@{/autor/autor-modificar(id=${autores.id})}"><button type="button" class="btn btn-primary">Modificar</button></a></td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
 

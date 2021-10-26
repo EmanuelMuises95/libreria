@@ -14,4 +14,19 @@ public class HomeControlador {
 		return "home";
 	}
 	
+	@GetMapping("/autor")
+	public String autor(ModelMap modelo) {
+		return "autor.html";
+	}
+	
+	@GetMapping("/editorial")
+	public String editorial(ModelMap modelo) {
+		return "editorial";
+	}
+	
+	@GetMapping("/libro")
+	public String libro(ModelMap modelo) {
+		return "libro";
+	}
+	
 }

@@ -18,7 +18,7 @@ public class AutorServicio {
 	private AutorRepositorio autorRepositorio;
 
 	@Transactional
-	public void guardarAutor(String id, String nombre) throws ErrorServicio {
+	public void guardarAutor(String nombre) throws ErrorServicio {
 
 		validar(nombre);
 
@@ -100,6 +100,13 @@ public class AutorServicio {
 	public List<Autor> listarAutores() {
 		return autorRepositorio.findAll();
 	}
+	
+	@Transactional
+	public Optional<Autor> buscarAutorPorID(String id){
+		Optional<Autor> respuesta = autorRepositorio.findById(id);
+		return respuesta;
+	}
+
 
 	private void validar(String nombre) throws ErrorServicio {
 		if (nombre == null || nombre.isEmpty()) {
